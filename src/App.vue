@@ -1,17 +1,21 @@
 <template>
-  <div>导航栏|
-    <router-link to='/'>Lynn</router-link>|
-    <router-link to='/xxx'>Lynn2</router-link>
-
-  </div>
-  <hr />
   <router-view />
 </template>
 
-<script>
-import Lynn from './components/lynn.vue'
-
+<script lang="ts">
+import { ref, provide } from "vue";
+import { router } from "./router";
 export default {
-  name: 'App',
-}
+  name: "App",
+  setup() {
+    const width = document.documentElement.clientWidth;
+    const menuVisible = ref(width <= 500 ? false : true);
+    provide("menuVisible", menuVisible); // set
+    router.afterEach(() => {
+      if (width <= 500) {
+        menuVisible.value = false;
+      }
+    });
+  },
+};
 </script>
