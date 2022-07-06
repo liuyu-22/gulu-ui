@@ -1,6 +1,6 @@
 <template>
     <button class="gulu-button" :class="classes" :disabled="disabled">
-        <span v-if="loading" class="gulu-loadingIndicator"></span>
+        <span v-if="loading" class="gulu-loadingIndicator"></span>//加载中指示器
         <slot />
     </button>
 </template>
