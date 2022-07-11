@@ -18,11 +18,11 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
 
-gulu-switch {
+.gulu-switch {
     height: $h;
     width: $h * 2;
     border: none;
