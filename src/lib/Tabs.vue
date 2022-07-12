@@ -27,10 +27,10 @@ export default {
         }
     },
     setup(props, context) {
-        const selectedItem = ref<HTMLDivElement>(null)
+        const selectedItem = ref<HTMLDivElement>(null) //泛型语法
         const indicator = ref<HTMLDivElement>(null)
         const container = ref<HTMLDivElement>(null)
-        onMounted(() => {
+        onMounted(() => { //只在第一次渲染执行
             watchEffect(() => {
                 const {
                     width
