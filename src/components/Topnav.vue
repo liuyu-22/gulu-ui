@@ -30,7 +30,6 @@ export default {
     },
     setup() {
         const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
-        if (!menuVisible) return;
         const toggleMenu = () => {
             menuVisible.value = !menuVisible.value;
         };
@@ -52,7 +51,7 @@ $color: #007974;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
     justify-content: center;
     align-items: center;
 
@@ -61,8 +60,8 @@ $color: #007974;
         margin-right: auto;
 
         >svg {
-            width: 48px;
-            height: 48px;
+            width: 32px;
+            height: 32px;
         }
     }
 
