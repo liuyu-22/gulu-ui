@@ -15,7 +15,14 @@ import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
 
 export default {
+  base: './',
+  assetsDir: 'assets',
   plugins: [md()],
+  rollupInputOptions: {
+    external: [
+      'src/icon/iconfont.js',
+    ]
+  },
   vueCustomBlockTransforms: {
     demo: (options) => {
       const { code, path } = options
